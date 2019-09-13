@@ -10,7 +10,7 @@ import tensorflow as tf
 
 class Model(object):
   def __init__(self):
-    self.x_input = tf.placeholder(tf.float32, shape = [None, 784])
+    self.x_input = tf.placeholder(tf.float32, shape = [None, 28, 28, 1])
     self.y_input = tf.placeholder(tf.int64, shape = [None])
 
     self.x_image = tf.reshape(self.x_input, [-1, 28, 28, 1])
